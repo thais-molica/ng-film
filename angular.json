@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-film"
+    }
+  },
+  "defaultProject": "ng-film",
+  "cli": {
+    "analytics": "03385829-f7c3-4cc3-9345-fdeeb10df949"
+  }
 }

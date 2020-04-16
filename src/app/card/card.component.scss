@@ -1,0 +1,30 @@
+@import '../../assets/palette.scss';
+
+$rateSize: 34;
+
+img {
+  border-radius: 5px;
+}
+div {
+  position: relative;
+  margin-bottom: $rateSize * 1px;
+}
+span {
+  border-radius: 100%;
+  border: 2px solid $white;
+  background: $primary;
+  bottom: ($rateSize / 2) * -1px;
+  color: $white;
+  font-size: 12px;
+  height: $rateSize * 1px;
+  left: $spacing * 1px;
+  line-height: $rateSize - 4 * 1px;
+  text-align: center;
+  position: absolute;
+  width: $rateSize * 1px;
+
+  &:after {
+    content: '%';
+    font-size: 11px;
+  }
+}
