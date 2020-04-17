@@ -21,7 +21,7 @@ export class FilmService {
 
   constructor(private http: HttpClient) { }
 
-  fetchFilm(): Observable<Object> {
+  fetchPopular(): Observable<Object> {
     return this.http.get('https://api.themoviedb.org/3/trending/movie/week?api_key=44fb267108da66bca930e0c68bf9bd68')
   }
 }

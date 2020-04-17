@@ -1,1 +1,11 @@
-<app-card title="Title" date="Feb 08,  2018" img="https://dummyimage.com/150x225/000/fff" id="1" rate="70"></app-card>
+<ul>
+  <li *ngFor="let film of mostPopular">
+    <app-card
+      [title]="film.title"
+      [date]="film.release_date | date:'mediumDate'"
+      [img]="film.poster_path"
+      [id]="film.id"
+      [rate]="film.vote_average"
+    ></app-card>
+  </li>
+</ul>
