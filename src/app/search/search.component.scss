@@ -1,0 +1,36 @@
+@import '../../assets/palette.scss';
+
+$searchWidht: 300px;
+
+input {
+  border: none;
+  border-radius: $spacing * 1px;
+  height: 40px;
+  padding: $spacing * 2px;
+  width: $searchWidht;
+}
+
+div {
+  position: relative;
+  width: $searchWidht;
+}
+
+ul {
+  background: $white;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}
+
+a {
+  cursor: pointer;
+  display: block;
+  font-size: 13px;
+  padding: 8px;
+  transition: all ease-in-out .5s;
+
+  &:hover {
+    background: $primary;
+    color: $white;
+  }
+}

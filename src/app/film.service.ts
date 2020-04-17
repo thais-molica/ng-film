@@ -33,7 +33,7 @@ export class FilmService {
   }
 
   fetchSearch(param): Observable<Object> {
-    return this.http.get(`${this.API}search/company?api_key=${this.API_KEY}&query=${param}`);
+    return this.http.get(`${this.API}search/movie?api_key=${this.API_KEY}&query=${param}`);
   }
 
   fetchFilm(id): Observable<Object> {

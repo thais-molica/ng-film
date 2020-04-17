@@ -1,0 +1,10 @@
+<input type="text" placeholder="O que você procura?" (keyup)="onKey($event)" />
+<div>
+  <ul *ngIf="list">
+    <li *ngFor="let item of list">
+      <a (click)="selectFilm(item.id)">
+        {{item.title}}
+      </a>
+    </li>
+  </ul>
+</div>

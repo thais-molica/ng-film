@@ -3,10 +3,12 @@
 header {
   background: $primary;
   margin-bottom: $spacing * 4px;
-  padding: $spacing * 1px;
+  padding: $spacing * 2px;
 }
 
-h1 {
+div {
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   max-width: $max-width * 1px;
 }
@@ -14,3 +16,7 @@ h1 {
 a {
   color: $white;
 }
+
+// app-search {
+
+// }
