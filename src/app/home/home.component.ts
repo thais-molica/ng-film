@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
         item.poster_path = `https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`
         this.mostPopular.push(item)
       });
-      console.log(this.mostPopular);
     });
   }
 }
