@@ -14,8 +14,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.filmService.fetchPopular().subscribe((data) => {
       data['results'].map((item: any) => {
-        item.poster_path = `https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`
-        this.mostPopular.push(item)
+        item.poster_path = `https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`;
+        item.href = `detail/${item.id}`;
+        this.mostPopular.push(item);
       });
     });
   }

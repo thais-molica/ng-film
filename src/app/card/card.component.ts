@@ -14,7 +14,7 @@ export class CardComponent implements OnInit {
   @Input()
     img: string;
   @Input()
-    id: string;
+    href: string;
   @Input()
     rate: string;
 
