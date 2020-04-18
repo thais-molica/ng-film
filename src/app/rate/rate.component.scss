@@ -1,4 +1,4 @@
-@import '../../assets/palette.scss';
+@import '../../assets/theme.scss';
 
 $rateSize: 34;
 
@@ -13,9 +13,4 @@ span {
   line-height: $rateSize - 4 * 1px;
   text-align: center;
   width: $rateSize * 1px;
-
-  // &:after {
-  //   content: '%';
-  //   font-size: 11px;
-  // }
 }
