@@ -14,18 +14,30 @@ export class DetailComponent implements OnInit {
   info: object;
   loadCompleted: boolean = false;
   id: number;
+  mobile: boolean = false;
   constructor(private filmService: FilmService, private route: ActivatedRoute) {
-    this.route.params.subscribe((res) => this.id = res.id);
+    this.route.params.subscribe((res) => (this.id = res.id));
   }
 
   ngOnInit(): void {
-    this.setImg()
+    this.setImg();
+    if (window.screen.width <= 599) {
+      this.mobile = true;
+    }
   }
 
   getInfo(id): void {
     this.filmService.fetchFilm(id).subscribe((data) => {
-      data['backdrop'] = `${this.base_url}${this.backdropSize}/${data['backdrop_path']}`
-      data['poster'] = `${this.base_url}${this.posterSize}/${data['poster_path']}`
+      if (data['backdrop_path']) {
+        data[
+          'backdrop'
+        ] = `${this.base_url}${this.backdropSize}/${data['backdrop_path']}`;
+      }
+      if (data['poster_path']) {
+        data[
+          'poster'
+        ] = `${this.base_url}${this.posterSize}/${data['poster_path']}`;
+      }
       this.info = data;
       this.loadCompleted = true;
       console.log(this.info);
@@ -42,6 +54,9 @@ export class DetailComponent implements OnInit {
   }
 
   getBackdrop() {
-    return `url(${this.info['backdrop']})`;
+    if(this.info['backdrop']){
+      return `url(${this.info['backdrop']})`;
+    }
+    return;
   }
 }

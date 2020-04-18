@@ -2,21 +2,18 @@
 
 header {
   background: $primary;
-  margin-bottom: $spacing * 4px;
-  padding: $spacing * 2px;
-}
-
-div {
+  padding: $spacing * 2px $spacing * 4px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  max-width: $max-width * 1px;
+
+  @include for-phone-only {
+    flex-direction: column;
+    padding: $spacing * 2px;
+ }
+
 }
 
 a {
   color: $white;
 }
 
-// app-search {
-
-// }

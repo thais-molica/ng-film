@@ -1,7 +1,7 @@
 <div *ngIf="loadCompleted">
-  <div class="container" [style.background]="getBackdrop()" >
+  <div class="container" [style.backgroundImage]="getBackdrop()">
     <div class="content">
-      <img [src]="info['poster']" />
+      <img *ngIf="!mobile" [src]="info['poster']" />
       <div class="info">
         <h1>{{ info["title"] }}</h1>
         <app-rate [rate]="info['vote_average']"></app-rate>
@@ -9,6 +9,7 @@
         <ul>
           <li *ngFor="let genre of info['genres']">{{ genre["name"] }}</li>
         </ul>
+        <p *ngIf="info['tagline']">{{ info["tagline"] }}</p>
         <p>{{ info["overview"] }}</p>
       </div>
     </div>

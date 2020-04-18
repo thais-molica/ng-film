@@ -16,7 +16,7 @@ export class RibbonComponent implements OnInit {
     navSpeed: 700,
     responsive: {
       0: {
-        items: 1,
+        items: 2,
       },
       400: {
         items: 2,

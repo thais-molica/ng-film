@@ -5,9 +5,16 @@ $searchWidht: 300px;
 input {
   border: none;
   border-radius: $spacing * 1px;
+  color: $text;
+  font-size: 14px;
   height: 40px;
   padding: $spacing * 2px;
   width: $searchWidht;
+
+  @include for-phone-only {
+    margin-top: $spacing * 1px;
+    width: 100%;
+ }
 }
 
 div {
@@ -20,14 +27,18 @@ ul {
   position: absolute;
   width: 100%;
   z-index: 9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  top: -6px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 a {
   cursor: pointer;
   display: block;
-  font-size: 13px;
-  padding: 8px;
-  transition: all ease-in-out .5s;
+  font-size: 14px;
+  padding: $spacing * 2px;
+  transition: all ease .9s;
 
   &:hover {
     background: $primary;

@@ -1,11 +1,12 @@
-@import '../../assets/palette.scss';
+@import "../../assets/palette.scss";
 
 .container {
+  background-size: cover;
   position: relative;
 
   &:before {
-    background: rgba($primary, .7);
-    content: '';
+    background: rgba($primary, 0.7);
+    content: "";
     left: 0;
     right: 0;
     top: 0;
@@ -18,18 +19,30 @@
 .content {
   color: $white;
   display: flex;
-  padding: $spacing * 4px;
+  padding: $spacing * 4px $spacing * 1px;
   position: relative;
   z-index: 1;
+
+  @include for-desktop-up {
+    padding: $spacing * 4px;
+  }
 }
 
 .info {
-  padding: 0 $spacing * 4px;
+  @include for-tablet-portrait-up {
+    padding: 0 $spacing * 4px;
+  }
 }
 
 ul {
-  display: inline-block;
-  margin-left: $spacing * 2px;
+  @include for-phone-only {
+    margin-top: $spacing * 2px;
+  }
+
+  @include for-desktop-up {
+    display: inline-block;
+    margin-left: $spacing * 2px;
+  }
 }
 
 li {
@@ -42,7 +55,7 @@ li {
     &:before {
       background: $white;
       border-radius: 100%;
-      content: '';
+      content: "";
       display: inline-block;
       height: 4px;
       left: ($spacing - 2) * 1px;
@@ -64,4 +77,8 @@ app-rate {
 
 p {
   margin-top: $spacing * 5px;
+}
+
+img {
+  border-radius: $spacing * 1px;
 }

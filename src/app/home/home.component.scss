@@ -1,5 +1,18 @@
 @import '../../assets/palette.scss';
 
 div {
-  padding: $spacing * 2px $spacing * 4px;
+  padding: $spacing * 2px;
+
+  @include for-desktop-up {
+    padding: $spacing * 2px $spacing * 4px;
+ }
+
+}
+
+app-ribbon {
+  display: block;
+}
+
+app-ribbon + app-ribbon {
+  margin-top: $spacing * 4px;
 }

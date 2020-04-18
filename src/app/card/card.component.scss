@@ -8,6 +8,10 @@ a {
 
 img {
   border-radius: 5px;
+
+  @include for-desktop-up {
+    height: 304px;
+ }
 }
 
 div {
