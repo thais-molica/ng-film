@@ -1,0 +1,21 @@
+@import '../../assets/palette.scss';
+
+$rateSize: 34;
+
+span {
+  border-radius: 100%;
+  border: 2px solid $white;
+  background: $primary;
+  color: $white;
+  display: inline-block;
+  font-size: 12px;
+  height: $rateSize * 1px;
+  line-height: $rateSize - 4 * 1px;
+  text-align: center;
+  width: $rateSize * 1px;
+
+  // &:after {
+  //   content: '%';
+  //   font-size: 11px;
+  // }
+}

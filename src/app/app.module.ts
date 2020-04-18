@@ -11,6 +11,7 @@ import { DetailComponent } from './detail/detail.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { RibbonComponent } from './ribbon/ribbon.component';
+import { RateComponent } from './rate/rate.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RibbonComponent } from './ribbon/ribbon.component';
     DetailComponent,
     HeaderComponent,
     SearchComponent,
-    RibbonComponent
+    RibbonComponent,
+    RateComponent
   ],
   imports: [
     BrowserModule,

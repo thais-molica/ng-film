@@ -2,17 +2,6 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
-class FilmItem {
-  constructor(
-    public id: number,
-    public rate: number,
-    public title: string,
-    public date: string,
-    public img: string
-    ){}
-}
 
 @Injectable({
   providedIn: 'root'

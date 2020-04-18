@@ -1,3 +1,15 @@
 <div *ngIf="loadCompleted">
-  <h1>{{ info['title'] }}</h1>
+  <div class="container" style="background-image: url({{info['backdrop']}})">
+    <div class="content">
+      <img [src]="info['poster']" />
+      <h1>{{ info['title'] }}</h1>
+      {{info['release_date']| date:'mediumDate'}}
+      <app-rate [rate]="info['vote_average']"></app-rate>
+      <ul>
+        <li *ngFor="let genre of info['genres']">{{genre['name']}}</li>
+      </ul>
+      <p>{{info['overview']}}</p>
+
+    </div>
+  </div>
 </div>
