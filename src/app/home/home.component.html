@@ -1,3 +1,5 @@
-<app-ribbon category="Últimos Lançamentos" [films]="latest"></app-ribbon>
-<app-ribbon category="Mais populares" [films]="mostPopular"></app-ribbon>
-<app-ribbon category="Mais bem avaliados" [films]="bestRated"></app-ribbon>
+<div>
+  <app-ribbon *ngIf="latest" category="Últimos Lançamentos" [films]="latest"></app-ribbon>
+  <app-ribbon *ngIf="mostPopular" category="Mais populares" [films]="mostPopular"></app-ribbon>
+  <app-ribbon *ngIf="bestRated" category="Mais bem avaliados" [films]="bestRated"></app-ribbon>
+</div>

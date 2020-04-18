@@ -1,7 +1,7 @@
 
-<a routerLink="{{href}}">
+<a [owlRouterLink]="href" [stopLink]="isDragging">
   <div>
-    <img src="{{img}}" />
+    <img class="img" src="{{img}}" />
     <app-rate [rate]="rate"></app-rate>
   </div>
   <h2>{{ title }}</h2>

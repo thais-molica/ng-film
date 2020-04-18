@@ -17,6 +17,8 @@ export class CardComponent implements OnInit {
     href: string;
   @Input()
     rate: string;
+  @Input()
+  isDragging: any;
 
   constructor() { }
 

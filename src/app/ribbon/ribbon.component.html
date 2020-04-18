@@ -1,12 +1,15 @@
 <h2>{{category}}</h2>
-<ul>
-  <li *ngFor="let film of films">
-    <app-card
+<owl-carousel-o [options]="customOptions"  (dragging)="isDragging = $event.dragging">
+  <ng-container *ngFor="let film of films">
+    <ng-template carouselSlide [id]="film.id">
+      <app-card
       [title]="film.title"
       [date]="film.release_date | date:'mediumDate'"
       [img]="film.poster_path"
       [href]="film.href"
       [rate]="film.vote_average"
+      [isDragging]="isDragging"
     ></app-card>
-  </li>
-</ul>
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
