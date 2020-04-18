@@ -1,5 +1,5 @@
 <div *ngIf="loadCompleted">
-  <div class="container" style="background-image: url({{ info['backdrop'] }})">
+  <div class="container" [style.background]="getBackdrop()" >
     <div class="content">
       <img [src]="info['poster']" />
       <div class="info">

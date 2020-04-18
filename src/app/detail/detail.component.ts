@@ -40,4 +40,8 @@ export class DetailComponent implements OnInit {
       this.getInfo(this.id);
     });
   }
+
+  getBackdrop() {
+    return `url(${this.info['backdrop']})`;
+  }
 }
