@@ -2,13 +2,19 @@
 
 $rateSize: 34;
 
+a {
+  display: inline-block;
+}
+
 img {
   border-radius: 5px;
 }
+
 div {
   position: relative;
   margin-bottom: $rateSize * 1px;
 }
+
 span {
   border-radius: 100%;
   border: 2px solid $white;

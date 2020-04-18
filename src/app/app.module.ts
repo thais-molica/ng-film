@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
+import { RibbonComponent } from './ribbon/ribbon.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SearchComponent } from './search/search.component';
     HomeComponent,
     DetailComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    RibbonComponent
   ],
   imports: [
     BrowserModule,

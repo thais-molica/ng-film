@@ -1,0 +1,12 @@
+<h2>{{category}}</h2>
+<ul>
+  <li *ngFor="let film of films">
+    <app-card
+      [title]="film.title"
+      [date]="film.release_date | date:'mediumDate'"
+      [img]="film.poster_path"
+      [href]="film.href"
+      [rate]="film.vote_average"
+    ></app-card>
+  </li>
+</ul>

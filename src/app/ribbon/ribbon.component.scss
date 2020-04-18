@@ -1,0 +1,10 @@
+@import '../../assets/palette.scss';
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+li {
+  margin-bottom: $spacing * 3px;
+  width: 20%;
+}

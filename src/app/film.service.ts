@@ -24,12 +24,19 @@ export class FilmService {
 
   constructor(private http: HttpClient) { }
 
+  fetchConfig(): Observable<Object> {
+    return this.http.get(`${this.API}configuration?api_key=${this.API_KEY}`);
+  }
   fetchPopular(): Observable<Object> {
-    return this.http.get(`${this.API}trending/movie/week?api_key=${this.API_KEY}`);
+    return this.http.get(`${this.API}discover/movie?sort_by=popularity.desc&api_key=${this.API_KEY}`);
   }
 
   fetchLatest(): Observable<Object> {
-    return this.http.get(`${this.API}discover/movie?api_key=${this.API_KEY}&language=en-US&sort_by=release_date.asc&include_adult=false&include_video=false&page=1`);
+    return this.http.get(`${this.API}discover/movie?primary_release_date.gte=2020-03-17&primary_release_date.lte=2020-04-17&api_key=${this.API_KEY}`);
+  }
+
+  fetchBestRated(): Observable<Object> {
+    return this.http.get(`${this.API}discover/movie?certification_country=US&certification=R&sort_by=vote_average.desc&api_key=${this.API_KEY}`);
   }
 
   fetchSearch(param): Observable<Object> {

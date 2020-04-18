@@ -1,11 +1,3 @@
-<ul>
-  <li *ngFor="let film of mostPopular">
-    <app-card
-      [title]="film.title"
-      [date]="film.release_date | date:'mediumDate'"
-      [img]="film.poster_path"
-      [href]="film.href"
-      [rate]="film.vote_average"
-    ></app-card>
-  </li>
-</ul>
+<app-ribbon category="Últimos Lançamentos" [films]="latest"></app-ribbon>
+<app-ribbon category="Mais populares" [films]="mostPopular"></app-ribbon>
+<app-ribbon category="Mais bem avaliados" [films]="bestRated"></app-ribbon>
