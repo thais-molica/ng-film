@@ -17,6 +17,51 @@
 
 .content {
   color: $white;
+  display: flex;
+  padding: $spacing * 4px;
   position: relative;
   z-index: 1;
+}
+
+.info {
+  padding: 0 $spacing * 4px;
+}
+
+ul {
+  display: inline-block;
+  margin-left: $spacing * 2px;
+}
+
+li {
+  display: inline-block;
+
+  & + & {
+    padding-left: $spacing * 2px;
+    position: relative;
+
+    &:before {
+      background: $white;
+      border-radius: 100%;
+      content: '';
+      display: inline-block;
+      height: 4px;
+      left: ($spacing - 2) * 1px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+    }
+  }
+}
+
+h1 {
+  margin-bottom: $spacing * 2px;
+}
+
+app-rate {
+  margin-right: $spacing * 2px;
+}
+
+p {
+  margin-top: $spacing * 5px;
 }
