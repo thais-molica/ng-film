@@ -5,12 +5,12 @@
       <div class="info">
         <h1>{{ info["title"] }}</h1>
         <app-rate [rate]="info['vote_average']"></app-rate>
-        {{ info["release_date"] | date: "mediumDate" }}
+        <span>{{ info["release_date"] | date: "mediumDate" }}</span>
         <ul>
           <li *ngFor="let genre of info['genres']">{{ genre["name"] }}</li>
         </ul>
-        <p *ngIf="info['tagline']">{{ info["tagline"] }}</p>
-        <p>{{ info["overview"] }}</p>
+        <p class="tagline" *ngIf="info['tagline']">{{ info["tagline"] }}</p>
+        <p class="overview">{{ info["overview"] }}</p>
       </div>
     </div>
   </div>
